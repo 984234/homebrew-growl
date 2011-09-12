@@ -94,6 +94,12 @@ error_notifier = GrowlNotifier.new(
                                    )
 
 case ARGV.first
+  when 'on'
+    system "echo alias \"brew='brew growl'\" > ~/.brew-growl"
+    ready_notifier.notify!
+  when 'off'
+    system "rm ~/.brew-growl"
+    stop_notifier.notify!
   when 'install'
     package = ARGV[1..ARGV.length].join(", ")
     system "#{BREW_PREFIX}/bin/brew install #{ARGV[1..ARGV.length].join(" ")} 2>&1"
@@ -124,12 +130,6 @@ case ARGV.first
     else
       error_notifier.notify!
     end
-  when 'on'
-    system "echo alias \"brew='brew growl'\" > ~/.brew-growl"
-    ready_notifier.notify!
-  when 'off'
-    system "rm ~/.brew-growl"
-    stop_notifier.notify!
   else
     system "#{BREW_PREFIX}/bin/brew #{ARGV.join(" ")}"
 end
