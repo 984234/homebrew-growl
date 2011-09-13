@@ -108,6 +108,22 @@ case ARGV.first
     else
       error_notifier.notify!
     end
+  when 'gem'
+    package = ARGV[1..ARGV.length].join(", ")
+    system "#{BREW_PREFIX}/bin/brew gem #{ARGV[1..ARGV.length].join(" ")} 2>&1"
+    if $?.exitstatus == 0
+      install_notifier.notify!
+    else
+      error_notifier.notify!
+    end
+  when 'pip'
+    package = ARGV[1..ARGV.length].join(", ")
+    system "#{BREW_PREFIX}/bin/brew pip #{ARGV[1..ARGV.length].join(" ")} 2>&1"
+    if $?.exitstatus == 0
+      install_notifier.notify!
+    else
+      error_notifier.notify!
+    end
   when 'uninstall'
     package = ARGV[1..ARGV.length].join(", ")
     system "#{BREW_PREFIX}/bin/brew uninstall #{ARGV[1..ARGV.length].join(" ")} 2>&1"
