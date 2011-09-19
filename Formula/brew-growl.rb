@@ -4,7 +4,7 @@ class BrewGrowl < Formula
   url 'https://github.com/secondplanet/brew-growl/tarball/master'
   homepage 'https://github.com/secondplanet/brew-pip'
   version '0.0.1'
-  md5 '01ab107a0cade3ffed4c5b36229438e1'
+  md5 '2762120cb23da531c9f2b8159214d995'
 
   def install
     inreplace 'brew-growl.rb', /^BREW_PREFIX = '.*'$/, "BREW_PREFIX = '#{HOMEBREW_PREFIX}'"
