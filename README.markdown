@@ -4,27 +4,11 @@
 
 ## Install
 
-Clone the repo into somewhere that's in your PATH.
+brew install https://raw.github.com/secondplanet/brew-growl/master/Formula/brew-growl.rb
 
 ## Usage
 
-To start using it, type
-
-    brew growl on
-
-Then add this to your `~/.bashrc` or `~/.zshrc`
-
-    source ~/.brew-growl
-
-To stop notifications,
-
-    brew growl off
-
-Right now this is a bit weird and uses `alias` to make it work; but I'm going to make
-some of the things work better in the future.
-
-NOTE: Currently, if you don't have Homebrew in `/usr/local`, you'll have to change
-the value of the `BREW_PREFIX` constant in `brew-growl.rb`
+Simply follow the instructions on install.
 
 ## growlnotifier.rb
 
