@@ -7,7 +7,7 @@ class BrewGrowl < Formula
   md5 '2762120cb23da531c9f2b8159214d995'
 
   def install
-    inreplace 'brew-growl.rb', /^BREW_PREFIX = '.*'$/, "BREW_PREFIX = '#{HOMEBREW_PREFIX}'"
+    inreplace 'bin/brew-growl.rb', /^BREW_PREFIX = '.*'$/, "BREW_PREFIX = '#{HOMEBREW_PREFIX}'"
     bin.install 'bin/brew-growl'
   end
 
