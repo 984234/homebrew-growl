@@ -93,6 +93,9 @@ error_notifier = GrowlNotifier.new(
                                    )
 
 case ARGV.first
+  when 'nil'
+    system "touch ~/.brew-growl"
+    system "#{BREW_PREFIX}/bin/brew"
   when 'on'
     system "echo alias \"brew='brew growl'\" > ~/.brew-growl"
     ready_notifier.notify!
