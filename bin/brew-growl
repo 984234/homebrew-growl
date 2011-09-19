@@ -44,9 +44,6 @@ class GrowlNotifier
   end
 
 end
-
-
-require 'formula'
   
 APPLICATION = 'Homebrew'
 BREW_PREFIX = '/usr/local'
