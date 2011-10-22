@@ -1,10 +1,9 @@
 require 'formula'
 
 class BrewGrowl < Formula
-  url 'https://github.com/secondplanet/brew-growl/tarball/master'
-  homepage 'https://github.com/secondplanet/brew-pip'
+  url 'git://github.com/secondplanet/brew-growl'
+  homepage 'https://github.com/secondplanet/brew-growl'
   version '0.0.1'
-  md5 '87faf912d41f3e9aef84e870629d380c'
 
   def install
     inreplace 'bin/brew-growl', /^BREW_PREFIX = '.*'$/, "BREW_PREFIX = '#{HOMEBREW_PREFIX}'"
