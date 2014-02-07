@@ -13,13 +13,3 @@ Simply follow the instructions on install. If you want to use brew-growl without
     brew growl install formula
     
 will work. Just use brew growl before pretty much any command. (brew-pip and brew-gem are supported)
-
-## growlnotifier.rb
-
-This includes a simple Growl wrapper I wrote in Ruby that I am using for this.
-It requires `growlnotify` and Growl.
-
-    brew install growlnotify
-
-The usage and details for the script are found at https://gist.github.com/1209632
-
