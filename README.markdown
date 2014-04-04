@@ -4,7 +4,7 @@
 
 ## Install
 
-    brew install https://raw.github.com/secondplanet/brew-growl/master/Formula/brew-growl.rb
+    brew install https://raw.github.com/secondplanet/homebrew-growl/master/Formula/brew-growl.rb
 
 ## Usage
 
