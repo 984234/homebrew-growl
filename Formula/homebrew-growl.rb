@@ -1,8 +1,8 @@
 require 'formula'
 
 class BrewGrowl < Formula
-  url 'git://github.com/secondplanet/brew-growl'
-  homepage 'https://github.com/secondplanet/brew-growl'
+  url 'git://github.com/secondplanet/homebrew-growl'
+  homepage 'https://github.com/secondplanet/homebrew-growl'
   version '0.0.1'
 
   def install
