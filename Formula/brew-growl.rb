@@ -17,11 +17,11 @@ To turn on brew growl,
 
 Add the following to your ~/.zshrc or ~/.bashrc:
 
-  source ~/.brew-growl
+  source ~/.brew-growl 2> /dev/null
 
-To switch of later,
+To switch off later,
 
-  brew growl on
+  brew growl off
     EOS
   end
 end
